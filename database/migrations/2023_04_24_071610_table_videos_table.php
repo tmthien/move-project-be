@@ -22,7 +22,6 @@ return new class extends Migration
             $table->tinyInteger('level');
             $table->tinyInteger('duration');
             $table->boolean('status')->default(1);
-            $table->boolean('show')->default(0);
             $table->boolean('commentable')->default(1);
             $table->timestamps();
         });

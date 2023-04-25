@@ -18,7 +18,6 @@ class Video extends Model
         'level',
         'duration',
         'status',
-        'show',
         'commentable',
     ];
 }

@@ -11,13 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('view_videos', function (Blueprint $table) {
-            $table->id();
+        Schema::create('feature_videos', function (Blueprint $table) {
+            $table->tinyIncrements('id');
             $table->bigInteger('video_id');
-            $table->bigInteger('user_id')->nullable();
-            $table->tinyInteger('age')->nullable();
-            $table->string('gender')->nullable();
-            $table->string('address')->nullable();
+            $table->boolean('show')->default(0);
             $table->timestamps();
         });
     }
@@ -27,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('view_videos');
+        Schema::dropIfExists('feature_videos');
     }
 };
